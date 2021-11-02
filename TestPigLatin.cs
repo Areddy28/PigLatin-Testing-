@@ -87,6 +87,43 @@ namespace PigLatin
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void Tommy()
+        {
+            //Arrange
+            PigLatin v = new PigLatin();
+
+
+            string expected = "ommytay";
+
+            // Act
+            string actual = v.ToPigLatin("tommy");
+
+            //Assert
+
+            Assert.Equal(expected, actual);
+
+        }
+
+        [Fact]
+
+        public void Strong()
+        {
+            //Arrange
+            PigLatin v = new PigLatin();
+
+
+            string expected = "ongstray";
+
+            // Act
+            string actual = v.ToPigLatin("strong");
+
+            //Assert
+
+            Assert.Equal(expected, actual);
+
+        }
+
 
 
         [Fact]

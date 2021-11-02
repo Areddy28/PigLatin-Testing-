@@ -6,19 +6,19 @@ namespace PigLatin
 {
     class PigLatin
     {
-        public bool IsVowel(char w)
+        public bool IsVowel(char c)
         {
             char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
 
 
-            foreach (char c in vowels)
+            foreach (char w in vowels)
             {
                 if (c == w)
                 {
-                    Console.WriteLine(vowels[0]);
+                    return true; 
                 }
             }
-            return true;
+            return false;
 
         }
 
@@ -73,10 +73,11 @@ namespace PigLatin
             }
 
             char firstLetter = word[0];
-            string output = "placeholder";
+            string output;
+            //string output1 = "placeholder";
             if (IsVowel(firstLetter) == true)
             {
-                //output = word + "ay";
+                //output1 = word + "ay";
                 output = word + "way"; 
             }
             else
@@ -92,8 +93,8 @@ namespace PigLatin
                     }
                 }
 
-                string sub = word.Substring(0, 1);
-                string postFix = word.Substring(1);
+                string sub = word.Substring(vowelIndex);
+                string postFix = word.Substring(0, vowelIndex);
 
                 output = sub + postFix + "ay";
             }
