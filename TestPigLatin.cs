@@ -97,7 +97,7 @@ namespace PigLatin
             string expected = "ommytay";
 
             // Act
-            string actual = v.ToPigLatin("tommy");
+            string actual = v.ToPigLatin("Tommy");
 
             //Assert
 
